@@ -2,3 +2,6 @@
 
 docker exec -it rocketchat-mongodb-1 mongosh
 
+use rocketchat
+
+db.rocketchat_settings.update({"_id" : "Site_Url"},{$set:{value:"http://chat.stoprentabuse.com"}})
